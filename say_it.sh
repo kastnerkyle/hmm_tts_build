@@ -6,7 +6,7 @@ fi
 SCRIPT=`readlink -f ${BASH_SOURCE[0]} || greadlink -f ${BASH_SOURCE[0]}`
 SCRIPTPATH=`dirname "$SCRIPT"`
 echo $1 > $SCRIPTPATH/tmp.txt
-$SCRIPTPATH/hts/flite+hts_engine-1.06/bin/flite_hts_engine -m $SCRIPTPATH/hts/hts_voice_cmu_us_arctic_slt-1.05/cmu_us_arctic_slt.htsvoice -r 2.0 -s 44100 -o $2 $SCRIPTPATH/tmp.txt
+$SCRIPTPATH/hts/flite+hts_engine-1.06/bin/flite_hts_engine -m $SCRIPTPATH/hts/hts_voice_cmu_us_arctic_slt-1.05/cmu_us_arctic_slt.htsvoice -r 1.0 -s 44100 -o $2 $SCRIPTPATH/tmp.txt
 rm $SCRIPTPATH/tmp.txt
 
 # https://sourceforge.net/p/hts-engine/mailman/message/20012715/
